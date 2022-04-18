@@ -17,7 +17,15 @@ make build
 make run_server
 ```
 
-```curl -X GET url``` или ```make test_req```
+```sh
+curl -X GET http://localhost:8080/search?tag=...
+``` 
+
+или 
+
+```sh
+make test_req
+```
 
 Чтобы убить процесс, используйте 
 ```sh 
