@@ -1,0 +1,19 @@
+{:paths   ["src" "classes"]
+ :deps    {org.clojure/clojure          {:mvn/version "1.10.3"}
+           com.fzakaria/slf4j-timbre    {:mvn/version "0.3.21"}
+           org.clojure/tools.deps.alpha {:mvn/version "0.12.1153"}
+           
+           cheshire/cheshire            {:mvn/version "5.10.2"}
+           clj-http/clj-http            {:mvn/version "3.12.3"}
+           mount/mount                  {:mvn/version "0.1.16"}
+           ring/ring-core               {:mvn/version "1.8.0"}
+           ring/ring-json               {:mvn/version "0.5.0"}
+           hiccup/hiccup                {:mvn/version "1.0.5"}
+           ring/ring                    {:mvn/version "1.9.5"}
+           
+           bidi/bidi                    {:mvn/version "2.1.6"}
+           uberdeps/uberdeps            {:mvn/version "1.1.2"}}
+ :aliases {:aot     {:main-opts ["-e" "(compile,'core.server)"]}
+           :uberjar {:main-opts ["-m" "uberdeps.uberjar"
+                                 "--target" "build/rtsolar_exam.jar"
+                                 "--main-class" "core.server"]}}}
